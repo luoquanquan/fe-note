@@ -1,0 +1,15 @@
+@startuml 两个终端握手过程
+header 小狐狸钱包
+title 两个终端握手过程
+footer powered by Circle Luo
+
+index --> bar: SYN
+note over index, bar
+这个握手请求打开 index 之后就会发
+此时 bar 页面还没有打开所以无法接收
+握手请求被废弃
+end note
+index <- bar: SYN
+index -> bar: ACK
+index <- bar: ACK
+@enduml
