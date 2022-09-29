@@ -13,6 +13,8 @@ tags:
 - github.com
 - assets-cdn.github.com
 
+<!-- more -->
+
 三个域名, 并复制搜索到的 ip 地址(ipv4)
 
 然后构造 hosts 文件内容
