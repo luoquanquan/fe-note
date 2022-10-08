@@ -187,7 +187,37 @@ var pump = function () {
 module.exports = pump
 ```
 
+## node 原生已经支持了 😂
+
+经过我叮咣一顿乱整, 对于 pump 这个模块算是搞明白了. 然后就看到了[这个文档](https://nodejs.org/api/stream.html#stream_stream_pipeline_streams_callback), `node v10.0.0` 新增的 api 已经原生实现了...
+
+原生 api 使用方法:
+```js
+const { pipeline } = require('node:stream');
+const fs = require('node:fs');
+const zlib = require('node:zlib');
+
+// Use the pipeline API to easily pipe a series of streams
+// together and get notified when the pipeline is fully done.
+
+// A pipeline to gzip a potentially huge tar file efficiently:
+
+pipeline(
+  fs.createReadStream('archive.tar'),
+  zlib.createGzip(),
+  fs.createWriteStream('archive.tar.gz'),
+  (err) => {
+    if (err) {
+      console.error('Pipeline failed.', err);
+    } else {
+      console.log('Pipeline succeeded.');
+    }
+  }
+);
+```
+
 ## 参考资料
 
 - <https://github.com/mafintosh/pump>
 - [pump中文文档](http://www.npmdoc.org/pumpzhongwenwendangpump-jszhongwenjiaochengjiexi.html)
+- [stream.pipeline(streams, callback)](https://nodejs.org/api/stream.html#stream_stream_pipeline_streams_callback)
