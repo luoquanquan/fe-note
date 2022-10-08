@@ -223,3 +223,4 @@ pipeline(
 - <https://github.com/mafintosh/pump>
 - [pump中文文档](http://www.npmdoc.org/pumpzhongwenwendangpump-jszhongwenjiaochengjiexi.html)
 - [stream.pipeline(streams, callback)](https://nodejs.org/api/stream.html#stream_stream_pipeline_streams_callback)
+- [数据流中的积压问题](https://nodejs.org/zh-cn/docs/guides/backpressuring-in-streams/)
