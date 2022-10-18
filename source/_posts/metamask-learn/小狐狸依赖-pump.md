@@ -9,7 +9,7 @@ tags:
 
 > pump is a small node module that pipes streams together and destroys all of them if one of them closes.
 
-在 metamask 中各运行时的通信使用到了流(stream), 相对于 `postMessage` 的好处是处理大数据不会卡内存. 但是在 stream 中处理过程中由于没有握手和挥手的机智, 如果你的目标流关闭了这个状态是不会通知给数据源流. 数据源还会源源不断的写入数据, 但是没有目标流会获取这些数据了...
+在 metamask 中各运行时的通信使用到了流(stream), 相对于 `postMessage` 的好处是处理大数据不会卡内存. 但是在 stream 中处理过程中, 如果目标流关闭了其状态是不会通知给数据源流. 数据源还会源源不断的写入数据, 但是没有目标流会获取这些数据了...
 
 <!-- more -->
 
