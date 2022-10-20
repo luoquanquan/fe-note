@@ -1,26 +1,24 @@
 ---
-title: 我在使用 AudioContext 过程中遇到的 9 个问题
+title: 可能是你最想要的前端唤端方案-launchApp
 date: 2021-11-16 16:25:42
 categories:
     - 开发笔记
 tags:
     - webApi
-    - audio
+    - Audio
 ---
 
 ## 背景
 
-解决了视频音频各种问题之后便迎来了下一个课题 - 分享页唤起 app
-
-对于这个需求, 我首先想到的就是王光头大佬的一句吐槽.
+关于网页唤起端能力的问题, 我想到了美团的大佬王兴的一个博客 ~
 
 ![2021-07-19-11-56-00](https://handle-note-img.niubishanshan.top/2021-07-19-11-56-00.png)
 
 <!-- more -->
 
-![2021-07-13-10-34-26](https://handle-note-img.niubishanshan.top/2021-07-13-10-34-26.png)
+由于当时在创新部门, 团队时不时就要搞一个新的 App, 遍观当时项目中关于唤端的逻辑代码, 要么只兼容安卓. 要么只兼容苹果. 明明安卓的 QQ 下可以打开, 可到了苹果的 QQ 就点不动了...
 
-可惜, 经过我一顿搜索. 目前内网相似功能的库都大多以唤起快手为主. 对于我们这种创新型部门自己的 app 没能完全覆盖业务场景. 于是, 在组内老鸟的指导下终于撸起袖子了 ~
+鉴于这种情况, 我就尝试要不写个库. 以后的代码全部 `npm i` 一把梭就可以去划水美滋滋 ~
 
 ![2021-07-19-14-30-20](https://handle-note-img.niubishanshan.top/2021-07-19-14-30-20.png)
 
@@ -93,10 +91,10 @@ a.click()
 
 ### universal link
 
+`universal link` 是 ios 9 推出的一种方案, 可以方便用户以访问一个链接的形式唤起 App, 这种唤端的方案体验就像是 App 端内切换页面用户无感知. 微信在其 >= 7.0.7 版本放开了对其的限制.
 
-渐进式
+## 参考文档
 
-1. scheme -> location, iOS qq
-2. 微信开放标签
-3. universal Link
-4. indent 测试了一下, 发现不好使
+- [h5唤起app技术deeplink方案总结](https://www.jianshu.com/p/fdc00c4fbb83)
+- [微信开放标签](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#22)
+- [Support Universal Links](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW1)
