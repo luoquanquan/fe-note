@@ -61,7 +61,7 @@
 {%- endif %}
 
 <script>
-  window.addEventListener('tabs:register', () => {
+  window.addEventListener('tabs:register', function() {
     let activeClass = CONFIG.comments.activeClass;
     if (CONFIG.comments.storage) {
       activeClass = localStorage.getItem('comments_active') || activeClass;

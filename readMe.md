@@ -8,11 +8,8 @@
 
 ## 常用命令
 
-- `yarn` 安装依赖
-- `yarn build` 创建静态资源
-- `yarn clean` 清除之前生成的网站数据
-- `yarn deploy` 把当前生成的静态资源部署到远端
-- `yarn server` 本地启动静态服务, 适合编写边预览
+- `npm i` 安装依赖
+- `npm run build` 创建静态资源
+- `npm run server` 本地启动静态服务, 适合编写边预览
   - 本地预览需要添加 hosts: `127.0.0.1 local-note.niubishanshan.top`
-- `yarn release` 根据最新的 blog 生成静态资源站 & 并将其部署到 github
 
