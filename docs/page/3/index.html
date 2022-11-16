@@ -209,6 +209,106 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/uncategorized/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87%20Offer/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="圈圈的圈">
+      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="圈圈的随手笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/uncategorized/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87%20Offer/test/" class="post-title-link" itemprop="url">未命名</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-10-03 11:12:39" itemprop="dateCreated datePublished" datetime="2022-10-03T11:12:39+08:00">2022-10-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-11-16 22:42:14" itemprop="dateModified" datetime="2022-11-16T22:42:14+08:00">2022-11-16</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          class Node {
+    constructor(val) {
+        this.val = val
+        this.next = null
+    }
+}
+
+const createList = (eles) => {
+    const head = new Node(eles.shift())
+    let cursor = head
+    let nextVal
+    while (nextVal = eles.shift()) {
+        cursor.next = new Node(nextVal)
+        cursor = cursor.next
+    }
+
+    return head
+}
+
+const head = createList([1, 2, 3, 4, 5])
+
+const reverseList = (head) => {
+    let pre = head
+    let cursor = null
+
+    while (pre !== null) {
+        const temp = pre.next
+        pre.next = cursor
+        cursor = pre
+        pre = temp
+    }
+
+    return cursor
+}
+
+console.log(JSON.stringify(reverseList(head), null, 2));
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87%20Offer/%E6%95%B0%E7%BB%84%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2/53%20-%20I.%20%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97%20I/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -959,95 +1059,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/html/%E8%AF%AD%E4%B9%89%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="圈圈的圈">
-      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="圈圈的随手笔记">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/%E9%9D%A2%E8%AF%95/interview/html/%E8%AF%AD%E4%B9%89%E5%8C%96/" class="post-title-link" itemprop="url">语义化</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-06-08 17:00:12" itemprop="dateCreated datePublished" datetime="2022-06-08T17:00:12+08:00">2022-06-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-27 16:17:00" itemprop="dateModified" datetime="2022-09-27T16:17:00+08:00">2022-09-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="常见的语义化标签"><a href="#常见的语义化标签" class="headerlink" title="常见的语义化标签"></a>常见的语义化标签</h2><p>article aside details figcaption figure footer header main mark nav section summary time and so on…</p>
-<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
-<li>对于搜索引擎友好. 有了良好的语义, 网页内容更容易被搜索引擎爬虫爬取</li>
-<li>开发维护更加友好. 语义化代码有利于团队内其他成员阅读你的代码并基于你的代码进行改造和升级.</li>
-<li>提升代码的可复用性和可移植性. 方便在多种设备执行, 例如移动设备, 盲人设备等等</li>
-</ul>
-<h2 id="如何实现语义化"><a href="#如何实现语义化" class="headerlink" title="如何实现语义化"></a>如何实现语义化</h2><p>一般网站分为头部, 导航, 文章, 侧栏, 底部… 根据不同的部位可使用不同的标签进行书写: header nav article section footer aside</p>
-<p>表示具体意义的区块也可以用特定意义的标签: a, abbr, address, blockquote, caption, code, datalist, del, details…</p>
-<ul>
-<li>尽量少的使用 div span 等无语义的标签</li>
-<li>在语义化不明显时, 例如既可以用 div 也可以用 p 标签的地方尽可能用 p 标签. 因为 p 标签有默认的上下间距. 有利于兼容特殊终端</li>
-<li>不要使用纯样式标签. 比方说 b font u 而是使用 css 样式代替</li>
-<li>每个表单项 input 元素都添加对应的 label 标签, 并且关联两者优化用户体验</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1120,7 +1131,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
