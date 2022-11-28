@@ -209,6 +209,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/css/%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="圈圈的圈">
+      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="圈圈的随手笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/%E9%9D%A2%E8%AF%95/interview/css/%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81/" class="post-title-link" itemprop="url">重绘和回流</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-12 16:00:30" itemprop="dateCreated datePublished" datetime="2021-12-12T16:00:30+08:00">2021-12-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-27 16:17:00" itemprop="dateModified" datetime="2022-09-27T16:17:00+08:00">2022-09-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="回流-重排"><a href="#回流-重排" class="headerlink" title="回流 - 重排"></a>回流 - 重排</h2><p>依据 Dom 渲染的流水线重新渲染 Dom 树, 相当于所有的绘制流程重新走一遍的流程</p>
+<h3 id="触发条件"><a href="#触发条件" class="headerlink" title="触发条件"></a>触发条件</h3><p>当我们对 DOM 结构修改引起其几何尺寸变化的时候会发生回流过程:</p>
+<ol>
+<li>一个 DOM 的几何属性变化: 常见的几何属性有: width height padding margin border 等等…</li>
+<li>DOM 节点增减或者移动</li>
+<li>读写 offset 族, scroll 族, client 族属性的时候, 浏览器为了读取这些值会进行回流</li>
+<li>调用 getComputedStyle 获取样式的时候也会触发回流</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E9%9D%A2%E8%AF%95/interview/css/%E9%87%8D%E7%BB%98%E5%92%8C%E5%9B%9E%E6%B5%81/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/webpack/webpack%20%E7%9A%84%E6%9E%84%E5%BB%BA%E6%B5%81%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -980,89 +1070,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/%E7%BD%91%E7%BB%9C/http%20vs%20https/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="圈圈的圈">
-      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="圈圈的随手笔记">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/%E9%9D%A2%E8%AF%95/interview/%E7%BD%91%E7%BB%9C/http%20vs%20https/" class="post-title-link" itemprop="url">http vs https</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-09 18:35:31" itemprop="dateCreated datePublished" datetime="2021-12-09T18:35:31+08:00">2021-12-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-28 00:43:06" itemprop="dateModified" datetime="2022-09-28T00:43:06+08:00">2022-09-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="什么是-http-x2F-https"><a href="#什么是-http-x2F-https" class="headerlink" title="什么是 http &#x2F; https"></a>什么是 http &#x2F; https</h2><p>http(HyperText Transfer Protocol), 超文本传输协议, 是实现网络通信的一种规范.<br>作为一种传输协议, 即将数据由 A 传递给 B, 再由 B 传递给 A. A &#x2F; B 之间可能存在很多第三方代理: A&lt;&#x3D;&gt;X&lt;&#x3D;&gt;Y&lt;&#x3D;&gt;Z&lt;&#x3D;&gt;B. 传输的数据也不是计算机底层的二进制, 而是完整的, 有意义的数据. 如 html css js 图片等超文本. 能够被上层应用识别</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E9%9D%A2%E8%AF%95/interview/%E7%BD%91%E7%BB%9C/http%20vs%20https/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1135,7 +1142,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-count">115</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

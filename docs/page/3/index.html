@@ -209,6 +209,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/web3/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/metamask-learn/%E5%B0%8F%E7%8B%90%E7%8B%B8%E4%BE%9D%E8%B5%96-pump/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="圈圈的圈">
+      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="圈圈的随手笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/web3/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/metamask-learn/%E5%B0%8F%E7%8B%90%E7%8B%B8%E4%BE%9D%E8%B5%96-pump/" class="post-title-link" itemprop="url">小狐狸依赖-pump</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-10-03 16:58:28" itemprop="dateCreated datePublished" datetime="2022-10-03T16:58:28+08:00">2022-10-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-10 10:16:33" itemprop="dateModified" datetime="2022-10-10T10:16:33+08:00">2022-10-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web3/" itemprop="url" rel="index">
+                    <span itemprop="name">web3</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>pump is a small node module that pipes streams together and destroys all of them if one of them closes.</p>
+</blockquote>
+<p>在 metamask 中各运行时的通信使用到了流(stream), 相对于 <code>postMessage</code> 的好处是处理大数据不会卡内存. 但是在 stream 中处理过程中, 如果目标流关闭了其状态是不会通知给数据源流. 数据源还会源源不断的写入数据, 但是没有目标流会获取这些数据了…</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/web3/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/metamask-learn/%E5%B0%8F%E7%8B%90%E7%8B%B8%E4%BE%9D%E8%B5%96-pump/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/uncategorized/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87%20Offer/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -240,7 +326,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-16 22:42:14" itemprop="dateModified" datetime="2022-11-16T22:42:14+08:00">2022-11-16</time>
+                <time title="修改时间：2022-11-28 22:41:00" itemprop="dateModified" datetime="2022-11-28T22:41:00+08:00">2022-11-28</time>
               </span>
 
           
@@ -273,23 +359,28 @@ const createList = (eles) => {
     return head
 }
 
-const head = createList([1, 2, 3, 4, 5])
+const l1 = createList([1, 2, 4])
+const l2 = createList([1, 3, 4])
 
-const reverseList = (head) => {
-    let pre = head
-    let cursor = null
-
-    while (pre !== null) {
-        const temp = pre.next
-        pre.next = cursor
-        cursor = pre
-        pre = temp
+const mergeTwoLists = (l1, l2) => {
+    if (l1 === null) {
+        return l2
     }
 
-    return cursor
+    if (l2 === null) {
+        return l1
+    }
+
+    if (l1.val < l2.val) {
+        l1.next = mergeTwoLists(l1.next, l2)
+        return l1
+    } else {
+        l2.next = mergeTwoLists(l1, l2.next)
+        return l2
+    }
 }
 
-console.log(JSON.stringify(reverseList(head), null, 2));
+console.log(JSON.stringify(mergeTwoLists(l1, l2), null, 2));
 
       
     </div>
@@ -975,90 +1066,6 @@ console.log(JSON.stringify(reverseList(head), null, 2));
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/JavaScript/eventLoop/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="圈圈的圈">
-      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="圈圈的随手笔记">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/%E9%9D%A2%E8%AF%95/interview/JavaScript/eventLoop/" class="post-title-link" itemprop="url">eventLoop</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-06-08 17:56:48" itemprop="dateCreated datePublished" datetime="2022-06-08T17:56:48+08:00">2022-06-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-29 16:59:27" itemprop="dateModified" datetime="2022-09-29T16:59:27+08:00">2022-09-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="为什么会有-eventLoop"><a href="#为什么会有-eventLoop" class="headerlink" title="为什么会有 eventLoop"></a>为什么会有 eventLoop</h2><p>JS 的任务分为同步和异步两种, 由于 js 执行引擎为单线程. 他们的处理方式有所不同. 同步任务直接放在主线程上依次执行. 异步任务则会存放在任务队列中, 如果有多个异步任务需执行则需要在任务队列中等待执行.</p>
-<p>单线程的 js 只能同时做一件事情, 而对于有些异步事件(如 ajax 请求) 往往耗时较长. 主线程会在请求发出后去干别的事情. 浏览器先通过事件注册 ajax 的回调函数. 待响应返回后再添加到任务队列中等待处理. 而主线程也会在空闲时检查任务队列中是否有新添加的异步任务. 如果任务队列中存在待执行任务则拿出来执行. 整个把异步任务添加到异步队列中, 主线程空闲时检查异步任务队列非空则执行的过程就是事件环, 也是 js 实现异步逻辑的核心</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E9%9D%A2%E8%AF%95/interview/JavaScript/eventLoop/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1131,7 +1138,7 @@ console.log(JSON.stringify(reverseList(head), null, 2));
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-count">115</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
