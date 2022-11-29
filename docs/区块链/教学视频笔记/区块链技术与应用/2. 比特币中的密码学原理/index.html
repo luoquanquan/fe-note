@@ -46,37 +46,23 @@
   };
 </script>
 
-  <meta name="description" content="常见的文件操作文件上传 上传头像 上传附件  文件下载 下载应用 下载附件">
+  <meta name="description" content="加密货币 crypto-currency 比特币中用到了加密学中两个功能 哈希 签名">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文件操作漏洞">
-<meta property="og:url" content="http://note.niubishanshan.top/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E7%99%BD%E5%B8%BD%E5%AD%90%E8%AE%AD%E7%BB%83%E8%AF%BE/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E6%BC%8F%E6%B4%9E/index.html">
+<meta property="og:title" content="2. 比特币中的密码学原理">
+<meta property="og:url" content="http://note.niubishanshan.top/%E5%8C%BA%E5%9D%97%E9%93%BE/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8/2.%20%E6%AF%94%E7%89%B9%E5%B8%81%E4%B8%AD%E7%9A%84%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="圈圈的随手笔记">
-<meta property="og:description" content="常见的文件操作文件上传 上传头像 上传附件  文件下载 下载应用 下载附件">
+<meta property="og:description" content="加密货币 crypto-currency 比特币中用到了加密学中两个功能 哈希 签名">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-54-25.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-55-12.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-55-30.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-55-48.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-56-01.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-57-58.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-58-59.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-59-40.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-59-58.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-18-00-51.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-18-03-46.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-18-06-20.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-18-06-42.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-18-06-59.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-18-07-09.png">
-<meta property="og:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-18-07-34.png">
-<meta property="article:published_time" content="2020-03-01T09:50:30.000Z">
-<meta property="article:modified_time" content="2022-09-27T16:43:06.697Z">
+<meta property="og:image" content="https://handle-note-img.niubishanshan.top/20221129235112.png">
+<meta property="og:image" content="https://handle-note-img.niubishanshan.top/20221130000113.png">
+<meta property="article:published_time" content="2022-11-29T14:14:03.000Z">
+<meta property="article:modified_time" content="2022-11-29T16:19:49.712Z">
 <meta property="article:author" content="圈圈的圈">
-<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://handle-note-img.niubishanshan.top/2020-03-01-17-54-25.png">
+<meta name="twitter:image" content="https://handle-note-img.niubishanshan.top/20221129235112.png">
 
-<link rel="canonical" href="http://note.niubishanshan.top/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E7%99%BD%E5%B8%BD%E5%AD%90%E8%AE%AD%E7%BB%83%E8%AF%BE/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E6%BC%8F%E6%B4%9E/">
+<link rel="canonical" href="http://note.niubishanshan.top/%E5%8C%BA%E5%9D%97%E9%93%BE/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8/2.%20%E6%AF%94%E7%89%B9%E5%B8%81%E4%B8%AD%E7%9A%84%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/">
 
 
 <script id="page-configurations">
@@ -88,7 +74,7 @@
   };
 </script>
 
-  <title>文件操作漏洞 | 圈圈的随手笔记</title>
+  <title>2. 比特币中的密码学原理 | 圈圈的随手笔记</title>
   
 
 
@@ -228,7 +214,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E7%99%BD%E5%B8%BD%E5%AD%90%E8%AE%AD%E7%BB%83%E8%AF%BE/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E6%BC%8F%E6%B4%9E/">
+    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E5%8C%BA%E5%9D%97%E9%93%BE/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8/2.%20%E6%AF%94%E7%89%B9%E5%B8%81%E4%B8%AD%E7%9A%84%E5%AF%86%E7%A0%81%E5%AD%A6%E5%8E%9F%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -241,7 +227,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          文件操作漏洞
+          2. 比特币中的密码学原理
         </h1>
 
         <div class="post-meta">
@@ -251,14 +237,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-03-01 17:50:30" itemprop="dateCreated datePublished" datetime="2020-03-01T17:50:30+08:00">2020-03-01</time>
+              <time title="创建时间：2022-11-29 22:14:03" itemprop="dateCreated datePublished" datetime="2022-11-29T22:14:03+08:00">2022-11-29</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-28 00:43:06" itemprop="dateModified" datetime="2022-09-28T00:43:06+08:00">2022-09-28</time>
+                <time title="修改时间：2022-11-30 00:19:49" itemprop="dateModified" datetime="2022-11-30T00:19:49+08:00">2022-11-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -266,8 +252,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">网络安全</span>
+                  <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url" rel="index">
+                    <span itemprop="name">区块链</span>
                   </a>
                 </span>
             </span>
@@ -290,58 +276,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="常见的文件操作"><a href="#常见的文件操作" class="headerlink" title="常见的文件操作"></a>常见的文件操作</h2><h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><ul>
-<li>上传头像</li>
-<li>上传附件</li>
-</ul>
-<h3 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h3><ul>
-<li>下载应用</li>
-<li>下载附件</li>
+        <p>加密货币 crypto-currency</p>
+<h2 id="比特币中用到了加密学中两个功能"><a href="#比特币中用到了加密学中两个功能" class="headerlink" title="比特币中用到了加密学中两个功能"></a>比特币中用到了加密学中两个功能</h2><ul>
+<li>哈希</li>
+<li>签名</li>
 </ul>
 <span id="more"></span>
 
-<h2 id="文件操作漏洞"><a href="#文件操作漏洞" class="headerlink" title="文件操作漏洞"></a>文件操作漏洞</h2><h3 id="文件上传-1"><a href="#文件上传-1" class="headerlink" title="文件上传"></a>文件上传</h3><ul>
-<li>上传 webshell</li>
-<li>上传木马</li>
+<h2 id="密码学中的哈希函数-cryptographic-hash-function-的两个性质"><a href="#密码学中的哈希函数-cryptographic-hash-function-的两个性质" class="headerlink" title="密码学中的哈希函数(cryptographic hash function) 的两个性质"></a>密码学中的哈希函数(cryptographic hash function) 的两个性质</h2><h3 id="collision-哈希碰撞-resistance"><a href="#collision-哈希碰撞-resistance" class="headerlink" title="collision(哈希碰撞) resistance"></a>collision(哈希碰撞) resistance</h3><p>假设用不等的输入 x !&#x3D; y 但是得到了相同的输出 H(x) &#x3D;&#x3D;&#x3D; H(y) 就认为发生了哈希碰撞. 根据<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%B8%BD%E7%AC%BC/8489865">鸽笼原理</a>哈希碰撞不可避免. 然而给出 x 很难找到可以与之碰撞的 y 除非蛮力求解 (brute-force).</p>
+<p><em>该性质的作用</em>: 对于一条信息 message 求 digest</p>
+<p>eg: m 的哈希值是 H(m) &#x3D; digest, 很难做到只修改 m 而使得 digest 的值不变</p>
+<p>哈希碰撞无法人为制造, 无法验证, 是根据实践经验得来的</p>
+<h3 id="hiding"><a href="#hiding" class="headerlink" title="hiding"></a>hiding</h3><p>哈希函数的计算过程是单向的, 不可逆的. 从 H(x) 不能推导出 x, hiding 性质的前提是输入空间足够大(避免彩虹表), 分布比较均匀. 如果输入空间不够大一般在 x 后面拼接一个随机数 nonce 再取哈希 H(x||nonce) 以此来保证输入空间</p>
+<p><em>该性质的作用</em>: 和 collision resistance 一起, 用来实现 digital commitment(或 digital equivalent of a sealed envelope)</p>
+<p>sealed envelope:</p>
+<ul>
+<li>假设某人可以在彩票发售期间预测中奖号码</li>
+<li>为了避免他发布的预测内容影响到大家对彩票的购买, 他可以将预测的结果 lottery 进行一次哈希得到 H(lottery) 并发布.</li>
+<li>根据 hiding 特性人们只知道了他预测结果的哈希但是不能知道实际的预测结果</li>
+<li>彩票开奖时间再公布他预测的 lottery, 根据 collision resistance 特性 lottery 是不可篡改的否则无法通过校验</li>
 </ul>
-<h3 id="文件下载-1"><a href="#文件下载-1" class="headerlink" title="文件下载"></a>文件下载</h3><ul>
-<li>下载系统任意文件</li>
-<li>下载程序代码</li>
-<li>下载配置文件</li>
+<h2 id="puzzle-friendly"><a href="#puzzle-friendly" class="headerlink" title="puzzle friendly"></a>puzzle friendly</h2><p>除了上述密码学中常用到的两个特性外, 比特币加密算法中还有一个常见的特性 puzzle friendly. 哈希值的计算事先是不可预测的, 对于一个需要 k 个 0 开头的结果你是无法预知哪个值更容易得到这个结果的需要调整输入一个一个尝试.</p>
+<p><img src="https://handle-note-img.niubishanshan.top/20221129235112.png" alt="20221129235112"></p>
+<p>挖矿的过程实际上就是找一个随机数 nonce 和区块头里的其他信息合在一起作为输入得出的哈希值要小于等于某个指定的目标阈值的过程 H(block header) ≤ target. block header 即块头, 其内部有很多域其中一个域是我们可以设置的随机数 nonce. 不断的尝试 nonce 使得 H(block header) 获得的哈希值落到指定的范围之内即挖矿成功.</p>
+<p><img src="https://handle-note-img.niubishanshan.top/20221130000113.png" alt="20221130000113"></p>
+<p>puzzle friendly 是指挖矿过程中没有捷径, 为了使得输出的值落在指定的范围内只能一个一个输入去试. 这个过程也可以作为工作量证明(proof of work)的依据. 然而一旦你挖出了矿, 其他人想要验证你挖矿的结果就很容易. 只需要做一次哈希证明 H(block header) ≤ target 即可.</p>
+<p>挖矿很难, 验证很容易. (difficult to solve, but easy to verify)</p>
+<p>比特币中用的哈希函数叫作 SHA-256(secure hash algorithm) 以上三个性质它都是满足的</p>
+<h2 id="比特币开户"><a href="#比特币开户" class="headerlink" title="比特币开户"></a>比特币开户</h2><p>在本地创建一套公私钥对(public key, private key)即可完成开户.</p>
+<p>公私钥匙对是来自于非对称的加密技术(asymmetric encryption algorithm), 其出现主要解决了对称加密过程中秘钥分发困难易被窃取的问题.</p>
+<p>两人之间信息的交流可以利用密钥(encryption key), A将信息加密后发给B,B收到后用密钥解密,因为加密和解密用的是同一个密钥, 所以叫对称加密. 前提是有渠道可以安全地把密钥分发给通讯的双方. 因此对称加密的缺点就是密钥的分发不方便,因为在网络上很容易被窃听. 非对称密钥是用一对密钥而不是一个,加密用公钥,解密用私钥,加密和解密用的都是接收方的公钥和私钥. 公钥是不用保密的,私钥要保密但是私钥只要保存在本地就行,不用传给对方. 公钥相当于银行账号,别人转账只要知道公钥就行,私钥相当于账户密码,知道私钥可以把账户上钱转走. 公钥和私钥是用来签名.</p>
+<p>加密: encryption(接收方公钥, 原文) &#x3D;&gt; 密文<br>解密: decryption(接收方私钥, 密文) &#x3D;&gt; 原文</p>
+<p>假如 A 想向 B 转 10 个比特币, A把交易放在区块链上, 别人怎么知道这笔交易是A发起的呢?这就需要A要用自己的私钥给交易签名, 其他人收到这笔交易后, 要用A的公钥去验证签名. 签名用私钥, 验证用公钥, 用的仍然是同一个人的. 创建账户产生相同公私钥的可能性微乎其微, 所以大量创建账户来窃取其他人账户是不可行的.</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%B8%BD%E7%AC%BC">鸽笼原理</a></li>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BD%A9%E8%99%B9%E8%A1%A8">彩虹表</a></li>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/sha256">SHA-256</a></li>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86">对称加密</a></li>
+<li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86">非对称加密</a></li>
 </ul>
-<h2 id="文件上传漏洞"><a href="#文件上传漏洞" class="headerlink" title="文件上传漏洞"></a>文件上传漏洞</h2><h3 id="正常上传流程"><a href="#正常上传流程" class="headerlink" title="正常上传流程"></a>正常上传流程</h3><p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-54-25.png" alt="2020-03-01-17-54-25"></p>
-<h3 id="恶意文件上传"><a href="#恶意文件上传" class="headerlink" title="恶意文件上传"></a>恶意文件上传</h3><p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-55-12.png" alt="2020-03-01-17-55-12"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-55-30.png" alt="2020-03-01-17-55-30"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-55-48.png" alt="2020-03-01-17-55-48"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-56-01.png" alt="2020-03-01-17-56-01"></p>
-<h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><ul>
-<li>可以上传可执行脚本</li>
-<li>脚本拥有执行权限</li>
-</ul>
-<h4 id="利用"><a href="#利用" class="headerlink" title="利用"></a>利用</h4><p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-57-58.png" alt="2020-03-01-17-57-58"></p>
-<h2 id="任意文件下载漏洞"><a href="#任意文件下载漏洞" class="headerlink" title="任意文件下载漏洞"></a>任意文件下载漏洞</h2><p>正常下载<br><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-58-59.png" alt="2020-03-01-17-58-59"></p>
-<p>异常下载<br><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-59-40.png" alt="2020-03-01-17-59-40"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-17-59-58.png" alt="2020-03-01-17-59-58"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-18-00-51.png" alt="2020-03-01-18-00-51"></p>
-<h3 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h3><ul>
-<li>代码泄露</li>
-<li>数据库配置文件泄露</li>
-<li>系统文件泄露</li>
-</ul>
-<h3 id="前提-1"><a href="#前提-1" class="headerlink" title="前提"></a>前提</h3><ul>
-<li>未验证下载文件格式</li>
-<li>未限制请求路径</li>
-</ul>
-<h3 id="利用-1"><a href="#利用-1" class="headerlink" title="利用"></a>利用</h3><p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-18-03-46.png" alt="2020-03-01-18-03-46"></p>
-<h2 id="文件包含漏洞"><a href="#文件包含漏洞" class="headerlink" title="文件包含漏洞"></a>文件包含漏洞</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
-<li>本地文件包含</li>
-<li>远程文件包含</li>
-</ul>
-<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-18-06-20.png" alt="2020-03-01-18-06-20"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-18-06-42.png" alt="2020-03-01-18-06-42"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-18-06-59.png" alt="2020-03-01-18-06-59"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-18-07-09.png" alt="2020-03-01-18-07-09"></p>
-<p><img src="https://handle-note-img.niubishanshan.top/2020-03-01-18-07-34.png" alt="2020-03-01-18-07-34"></p>
 
     </div>
 
@@ -351,7 +324,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag"># 网络安全</a>
+              <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
           </div>
 
         
@@ -360,13 +333,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E7%99%BD%E5%B8%BD%E5%AD%90%E8%AE%AD%E7%BB%83%E8%AF%BE/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E/%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5/" rel="prev" title="命令注入">
-      <i class="fa fa-chevron-left"></i> 命令注入
+    <a href="/%E5%8C%BA%E5%9D%97%E9%93%BE/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8/1.%20%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D/" rel="prev" title="1. 课程介绍">
+      <i class="fa fa-chevron-left"></i> 1. 课程介绍
     </a></div>
-      <div class="post-nav-item">
-    <a href="/%E5%89%8D%E7%AB%AF/tips/cookie/" rel="next" title="Cookie">
-      Cookie <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -426,7 +396,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">常见的文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-text">文件上传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-text">文件下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%E6%BC%8F%E6%B4%9E"><span class="nav-text">文件操作漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0-1"><span class="nav-text">文件上传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD-1"><span class="nav-text">文件下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E"><span class="nav-text">文件上传漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%B8%B8%E4%B8%8A%E4%BC%A0%E6%B5%81%E7%A8%8B"><span class="nav-text">正常上传流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%B6%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-text">恶意文件上传</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-text">前提</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A9%E7%94%A8"><span class="nav-text">利用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E6%BC%8F%E6%B4%9E"><span class="nav-text">任意文件下载漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B1%E5%AE%B3"><span class="nav-text">危害</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%8F%90-1"><span class="nav-text">前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-1"><span class="nav-text">利用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E"><span class="nav-text">文件包含漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B"><span class="nav-text">过程</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E7%89%B9%E5%B8%81%E4%B8%AD%E7%94%A8%E5%88%B0%E4%BA%86%E5%8A%A0%E5%AF%86%E5%AD%A6%E4%B8%AD%E4%B8%A4%E4%B8%AA%E5%8A%9F%E8%83%BD"><span class="nav-text">比特币中用到了加密学中两个功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0-cryptographic-hash-function-%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%80%A7%E8%B4%A8"><span class="nav-text">密码学中的哈希函数(cryptographic hash function) 的两个性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#collision-%E5%93%88%E5%B8%8C%E7%A2%B0%E6%92%9E-resistance"><span class="nav-text">collision(哈希碰撞) resistance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hiding"><span class="nav-text">hiding</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#puzzle-friendly"><span class="nav-text">puzzle friendly</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E7%89%B9%E5%B8%81%E5%BC%80%E6%88%B7"><span class="nav-text">比特币开户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -442,20 +412,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">117</span>
+          <span class="site-state-item-count">119</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">42</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
