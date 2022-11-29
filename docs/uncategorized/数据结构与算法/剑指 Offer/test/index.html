@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="class Node {     constructor(val) {         this.val &#x3D; val         this.next &#x3D; null     } }  const createList &#x3D; (eles) &#x3D;&gt; {     const head &#x3D; new Node(eles.shift())     let cursor &#x3D; head     let nextVa">
+  <meta name="description" content="const dfs &#x3D; (board, words, i, j, k) &#x3D;&gt; {     if (i &gt;&#x3D; board.length || i &lt; 0) {         return false     }      if (j &gt;&#x3D; board[0].length || j &lt; 0) {         return false     }      if (board[i][j] !&#x3D;&#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="圈圈的随手笔记">
 <meta property="og:url" content="http://note.niubishanshan.top/uncategorized/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87%20Offer/test/index.html">
 <meta property="og:site_name" content="圈圈的随手笔记">
-<meta property="og:description" content="class Node {     constructor(val) {         this.val &#x3D; val         this.next &#x3D; null     } }  const createList &#x3D; (eles) &#x3D;&gt; {     const head &#x3D; new Node(eles.shift())     let cursor &#x3D; head     let nextVa">
+<meta property="og:description" content="const dfs &#x3D; (board, words, i, j, k) &#x3D;&gt; {     if (i &gt;&#x3D; board.length || i &lt; 0) {         return false     }      if (j &gt;&#x3D; board[0].length || j &lt; 0) {         return false     }      if (board[i][j] !&#x3D;&#x3D;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-03T03:12:39.790Z">
-<meta property="article:modified_time" content="2022-11-28T15:13:06.572Z">
+<meta property="article:modified_time" content="2022-11-29T03:34:42.087Z">
 <meta property="article:author" content="圈圈的圈">
 <meta property="article:tag" content="前端, JavaScript, Node, 全栈, 读书">
 <meta name="twitter:card" content="summary">
@@ -241,7 +241,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-28 23:13:06" itemprop="dateModified" datetime="2022-11-28T23:13:06+08:00">2022-11-28</time>
+                <time title="修改时间：2022-11-29 11:34:42" itemprop="dateModified" datetime="2022-11-29T11:34:42+08:00">2022-11-29</time>
               </span>
 
           
@@ -262,41 +262,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        class Node {
-    constructor(val) {
-        this.val = val
-        this.next = null
-    }
-}
-
-const createList = (eles) => {
-    const head = new Node(eles.shift())
-    let cursor = head
-    let nextVal
-    while (nextVal = eles.shift()) {
-        cursor.next = new Node(nextVal)
-        cursor = cursor.next
+        const dfs = (board, words, i, j, k) => {
+    if (i >= board.length || i < 0) {
+        return false
     }
 
-    return head
-}
-
-const l1 = createList([2, 6, 4])
-const l2 = createList([1, 5])
-
-const getIntersectionNode = (l1, l2) => {
-    let cur1 = l1
-    let cur2 = l2
-
-    while (cur1?.val != cur2?.val) {
-        cur1 = cur1 != null ? cur1.next : l2
-        cur2 = cur2 != null ? cur2.next : l1
+    if (j >= board[0].length || j < 0) {
+        return false
     }
 
-    return cur1?.val || null
+    if (board[i][j] !== words[k]) {
+        return false
+    }
+
+    if (k === words.length - 1) {
+        return true
+    }
+
+    const temp = board[i][j]
+    board[i][j] = '/'
+    const ret = dfs(board, words, i - 1, j, k + 1) || dfs(board, words, i + 1, j, k + 1) || dfs(board, words, i, j - 1, k + 1) || dfs(board, words, i, j + 1, k + 1)
+    board[i][j] = temp
+    return ret
 }
 
-console.log(JSON.stringify(getIntersectionNode(l1, l2), null, 2));
+const exist = (board, word) => {
+    const words = [...word]
+    for (let i = 0; i < board.length; i++) {
+        const element = board[i];
+        for (let j = 0; j < element.length; j++) {
+            if (dfs(board, words, i, j, 0)) {
+                return true
+            }
+        }
+    }
+
+    return false
+}
+
+// console.log(exist([
+//     ["A","B","C","E"],
+//     ["S","F","C","S"],
+//     ["A","D","E","E"]
+// ], "ABCCED"))
+
+console.log(exist([
+    ["a", "b"],
+    ["c", "d"]
+], "abcd"))
 
     </div>
 
@@ -393,7 +406,7 @@ console.log(JSON.stringify(getIntersectionNode(l1, l2), null, 2));
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-count">117</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -406,7 +419,7 @@ console.log(JSON.stringify(getIntersectionNode(l1, l2), null, 2));
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

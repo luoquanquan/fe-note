@@ -209,6 +209,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/%E7%BD%91%E7%BB%9C/GET%20%E5%92%8C%20POST%20%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="圈圈的圈">
+      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="圈圈的随手笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/%E9%9D%A2%E8%AF%95/interview/%E7%BD%91%E7%BB%9C/GET%20%E5%92%8C%20POST%20%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">GET 和 POST 的区别</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-12 17:50:39" itemprop="dateCreated datePublished" datetime="2021-12-12T17:50:39+08:00">2021-12-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-27 16:17:00" itemprop="dateModified" datetime="2022-09-27T16:17:00+08:00">2022-09-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>参数位置, GET 请求参数通过 url 传递, post 放在 request body 中</li>
+<li>大小限制, 限于浏览器 和 nginx 对 url 长度的限制, get 的参数也会受到限制; eg: 当初在百家号我把质量检测接口搞挂的情况, 因为每次质量检测需要上传富文本中的所有内容. 我把 POST 接口改成了 GET</li>
+<li>缓存性, get 请求会被浏览器主动缓存, post 不会, 除非手动设置</li>
+<li>从表面上看 POST 似乎比 GET 更加安全. 因为普通用户看不到请求参数. 但是实际上想看的用户你是拦不住的</li>
+<li>GET请求只能进行url编码，而POST支持多种编码方式</li>
+<li>从后端角度看, 接收 GET 请求参数直接同步处理即可. 但是想要接收 POST 请求参数的话就需要异步监听 data 事件 &#x3D;&gt; 请求体的上传是流式的</li>
+<li>GET 请求参数会被完整的保留在浏览器历史记录中 POST 不会</li>
+<li>GET url 地址可以被存入书签, POST 不可以</li>
+</ol>
+<p>综上, 看上去 GET 和 POST 天差地别, 但是实际上…根据 图解 HTTP .两者的请求报文完全一致🤔</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/JavaScript/===%20vs%20==/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1036,89 +1122,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/webpack/loader%20vs%20plugin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="圈圈的圈">
-      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="圈圈的随手笔记">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/%E9%9D%A2%E8%AF%95/interview/webpack/loader%20vs%20plugin/" class="post-title-link" itemprop="url">loader vs plugin</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-12 16:23:40" itemprop="dateCreated datePublished" datetime="2021-12-12T16:23:40+08:00">2021-12-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-27 16:17:00" itemprop="dateModified" datetime="2022-09-27T16:17:00+08:00">2022-09-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="作用不同"><a href="#作用不同" class="headerlink" title="作用不同"></a>作用不同</h2><p>loader 直译为加载器, webpack 将一切文件视为模块, 但是其原生只能解析 js 文件, 如果想要打包其他文件的话就需要用到 loader 进行一次转化. Loader 赋予了 webpack 解析非 js 文件的能力. plugin 直译为插件, 其可以拓展 webpack 的功能, 让 webpack 具备更多的灵活性. 在 webpack 运行的生命周期中会广播出很多事件. Plugin 可以监听这些事件. 在合适的时机通过 webpack 提供的 api 改变输出的结果</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/%E9%9D%A2%E8%AF%95/interview/webpack/loader%20vs%20plugin/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1191,7 +1194,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-count">117</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1204,7 +1207,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
