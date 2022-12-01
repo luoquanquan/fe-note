@@ -209,6 +209,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/html/Link%20%E6%A0%87%E7%AD%BE%E5%92%8C%20a%20%E6%A0%87%E7%AD%BE%E6%9C%89%E5%95%A5%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="圈圈的圈">
+      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="圈圈的随手笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/%E9%9D%A2%E8%AF%95/interview/html/Link%20%E6%A0%87%E7%AD%BE%E5%92%8C%20a%20%E6%A0%87%E7%AD%BE%E6%9C%89%E5%95%A5%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">Link 标签和 a 标签有啥区别</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-12 18:02:21" itemprop="dateCreated datePublished" datetime="2021-12-12T18:02:21+08:00">2021-12-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-27 16:17:00" itemprop="dateModified" datetime="2022-09-27T16:17:00+08:00">2022-09-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h2><ol>
+<li>渲染结果相同, 两者渲染的结果都是 a 标签</li>
+<li>实现功能相同, 都能够实现页面的跳转</li>
+</ol>
+<h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h2><ol>
+<li>Link 标签的跳转只会触发与之相匹配的 Route 对应的页面内容更新. 不会触发整页的刷新, 而 a 标签的跳转会刷新整个页面</li>
+<li>Link 标签一般需要配合 Route 使用, a 标签可以随意添加</li>
+<li>Link 标签实际上是禁用了 a 标签原有的跳转能力之后自行实现的跳转<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[...<span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;a&#x27;</span>)].<span class="title function_">forEach</span>(<span class="function"><span class="params">a</span> =&gt;</span> &#123;</span><br><span class="line">    a.<span class="property">onclick</span> = <span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 阻止默认跳转事件</span></span><br><span class="line">        e.<span class="title function_">preventDefault</span>()</span><br><span class="line">        location.<span class="property">href</span> = <span class="variable language_">this</span>.<span class="property">href</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/webpack/sourcemap%20%E6%98%AF%E4%BB%80%E4%B9%88%E6%9C%89%E4%BD%95%E4%BD%9C%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1021,97 +1105,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://note.niubishanshan.top/%E9%9D%A2%E8%AF%95/interview/webpack/%E5%B8%B8%E8%A7%81%E7%9A%84%20plugin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="圈圈的圈">
-      <meta itemprop="description" content="技术学习, 读书笔记, 生活感悟~">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="圈圈的随手笔记">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/%E9%9D%A2%E8%AF%95/interview/webpack/%E5%B8%B8%E8%A7%81%E7%9A%84%20plugin/" class="post-title-link" itemprop="url">常见的 plugin</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-12 17:12:29" itemprop="dateCreated datePublished" datetime="2021-12-12T17:12:29+08:00">2021-12-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-27 16:17:00" itemprop="dateModified" datetime="2022-09-27T16:17:00+08:00">2022-09-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://www.webpackjs.com/plugins/">webpack plugins 文档</a></p>
-<ul>
-<li>html-webpack-plugin: 生成 html 模板</li>
-<li>DefinePlugin: 在项目中定义环境变量, webpack 4 之后会根据 mode 字段自动定义环境变量</li>
-<li>IgnorePlugin: 忽略部分文件的编译</li>
-<li>CmmonsChunkPlugin: 提取公共代码, wp4 之后已经不推荐使用, 提取公共代码可以通过 SplitChunksPlugin 来</li>
-<li>SplitChunksPlugin: CommonsChunkPlugin替代, 配置: optimization.splitChunks</li>
-<li>ProgressPlugin: 命令行展示打包的进度</li>
-<li>UglifyJsPlugin: 压缩 js 的插件, 不支持 es 的压缩. Wp4 之后不推荐用</li>
-<li>TerserWebpackPlugin: wp4 之后的 js 压缩工具</li>
-<li>extract-text-webpack-plugin: css 模块提取独立文件, wp 5 之后不推荐使用</li>
-<li>mini-css-extract-plugin: wp 5 之后的 css 提取工具</li>
-<li>Clean-webpack-plugin: 清理 webpack 打包结果</li>
-<li>Speed-measure-webpack-plugin: 监控 webpack 打包耗时</li>
-<li>webpack-bundle-analyzer: 可视化 webpack 输出模块的体积</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1184,7 +1177,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-count">120</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
